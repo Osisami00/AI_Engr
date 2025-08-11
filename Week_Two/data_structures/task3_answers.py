@@ -46,9 +46,15 @@ print(python_substring)
 request_char = input("Input a text of your choice:")
 char_reverse = "".join(reversed(request_char))
 print(char_reverse)
-'''
+
 
 # 8- Given a string with extra spaces, remove the leading and trailing spaces
 request_char = input("Input a text of your choice with spaces both front and back:")
 space_remover = request_char.strip()
 print(space_remover)
+'''
+
+# 9- ask the user to enter a sentence and print the number of  vowels in it
+request_char = input("Enter any word of your choice:")
+vowel_counter = request_char.count("a","e","i","o","u") + 1
+print(vowel_counter)
