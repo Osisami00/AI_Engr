@@ -56,5 +56,5 @@ print(space_remover)
 
 # 9- ask the user to enter a sentence and print the number of  vowels in it
 request_char = input("Enter any word of your choice:")
-vowel_counter = request_char.count("a","e","i","o","u") + 1
-print(vowel_counter)
+vowel_counter = request_char.lower()
+print(vowel_counter.count("a")+vowel_counter.count("i")+ vowel_counter.count("e") + vowel_counter.count("o")+ vowel_counter.count("u"))
