@@ -35,8 +35,31 @@ print("red" in colors)
 print("black" in colors)
 
 
-# length (len())
+#6- length (len())
 # counts the number of elements in ;list
 
 items = ["pen", "book", "laptop"]
 print(len(items))
+
+
+# 7- Min and Max (min()/max())
+    # -Return the smallest or largest element
+nums = [5,4,3,2,1]
+print(max(nums))
+print(max)
+
+# 8- Sum (sum())
+    # -add numerical elements in a list\
+numbers = [1,2,3,4]
+print(sum(numbers))
+
+# 9- list comprehension
+    # -create a list in a single line
+squares = [x**2 for x in range(5)]
+print(squares)
+
+# 10- Copying a list
+        # -create duplicate
+a = [1,2,3]
+b = a.copy()
+print(b)
