@@ -74,7 +74,7 @@ tuple_profile = (
 # unpack biodata
 first_name, age, favorite_color, home_town = tuple_profile
 print(f"Here is your bio-data:\nName: {first_name}\nAge: {age}\nFavorite Color: {favorite_color}\nHometown: {home_town}")
-'''
+
 
 # Task 5: Modify Tuple Indirectly
 my_cart = (
@@ -91,19 +91,19 @@ my_cart_tuple = tuple(list_converter)
 print("|".join(my_cart_tuple))
 
 
-
 # Task6:  Attendance Tracker
-days = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+days = ("Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday")
 months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November" "December")
 
 student_bio = (
-    input("Enter your name: ")
-    input("Are you Male and Female? ")
-    input("Enter course track: ")
-    input("Enter current month number: ")
-    input("Enter current day number: ")
+    input("Enter your name: "),
+    input("Are you Male and Female? "),
+    input("Enter course track: "),
+    int(input("Enter current month number: ")),
+    int(input("Enter current day number: "))
 )
+name,sex,course_track,month,day = student_bio
 
-day = days[[days] + 1]
-month = months[[months] + 1] 
 
+print(f"Here is your Attendance Info:\nName: {name}\nSex: {sex}\nCourse Title: {course_track}\nMonth: {month-1}\nDay: {day-1}")
+'''
