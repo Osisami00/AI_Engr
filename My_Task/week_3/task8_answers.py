@@ -102,7 +102,6 @@ store_item[item_request.title()] -= quantity_request
  
 print(f"After purchase: {store_item}")
 '''
-
 # Task6: Eligibility Checker
 student = {}
 student["name"]  = input("Enter your name: ")
@@ -120,8 +119,11 @@ print(f"Name: {student['name']}\nAge: {student['age']}\nWAEC Result:{student["wa
 
 
 
-
-
+# items_list = ["Book", "Pen", "Bag"]
+# price_list = [500,200,1000]
+# cart_total = 0
+# items_list[0] = price_list[0]
+# print(items_list)
 
 
 

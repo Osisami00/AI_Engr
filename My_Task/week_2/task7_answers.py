@@ -149,3 +149,4 @@ print(f'{title4:^50}')
 print(class_profile["Hobbies"])
 print(f"\nTotal Hobbies:\t{class_profile['Hobbies Count']}")
 print(f"Average Score:\t{class_profile['Performance']['Average']:.2f}")
+'''
