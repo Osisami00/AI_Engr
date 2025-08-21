@@ -230,10 +230,30 @@ for point in cordinates:
     
 
 # Try and use while True for validation
-while True:
-    age = input("Enter your age: ")
-    if age.isdigit():
-        print(f"Your age is {age}")
-    else:
-        print("Invalid input. Please enter a number.")
-    break
+# while True:
+#     age = input("Enter your age: ")
+#     if age.isdigit():
+#         print(f"Your age is {age}")
+#     else:
+#         print("Invalid input. Please enter a number.")
+#     break
+
+# num = 1
+# while num <= 10:
+#     print(num, end=" ")
+#     num += 1
+
+# timer = 10
+# while timer > 0:
+#     print("Countdown:", timer, end=" ")
+#     timer -= 1
+
+# for num in range(1,10):
+#     if num == 5:
+#         break
+#     print(num)
+
+for num in range(1,10):
+    if num == 5:
+        continue
+    print(num)
