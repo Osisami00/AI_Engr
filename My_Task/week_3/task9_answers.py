@@ -149,7 +149,7 @@ else:
 eligibility_status = student_bio["age"] and student_bio["nationality"] and student_bio["waec_status"] and student_bio["scholarship_status"]
 
 print(f"Eligibity Status: {eligibility_status}")
-'''
+
 
 
 # **Task8 Exercise4: Student Record**
@@ -171,19 +171,149 @@ student = {}
 student["name"]= input("Enter your name: ")
 student["age"] = input("Enter your age: ")
 student["subject"] = {
-    "math" : int(input("Enetr your math score: ")),
-    "English" : int(input("Enetr your English score: ")),
-    "French" : int(input("Enetr your French score: "))
+    "math" : int(input("Enter your math score: ")),
+    "English" : int(input("Enter your English score: ")),
+    "French" : int(input("Enter your French score: "))
 }
+
+total_score = student["subject"]["French"] + student["subject"]["math"] + student["subject"]["English"]
+score_len = len(student["subject"])
 student["passed"] = student["subject"]["math"] >= 50 and student["subject"]["English"] >= 50 and student["subject"]["French"] >= 50 
-print(f"\nName : {student["name"]}\nAge: {student["age"]}\nSubject:\nMath: {student["subject"]["math"]}\nEnglish: {student["subject"]["English"]}\nFrench: {student["subject"]["French"]}")
+print(f"\nName : {student["name"]}\nAge: {student["age"]}\nSubject:\nMath: {student["subject"]["math"]}\nEnglish: {student["subject"]["English"]}\nFrench: {student["subject"]["French"]}\nAverage Score: {total_score/score_len: .1f}")
 
 while True:
     if student["passed"] == True:
-        print("You are promoted to the next class")
+        print("Status: Promoted To The Next Class.")
         break
     else: 
-        print("You need be more serious to get promoted next year")
+        print("Your score is below average.\nStatus: To Repeat Class.")
         break
 
 
+# Stationery Store Inventory Database
+store ={"Book": 10, "Pen": 20, "Bag": 5, "Eraser": 10, "sellotape": 12}
+# prompt user to enter item and quantity
+
+while True:
+    item_request = input("Enter the name of stationary you want to buy: ")
+    if item_request.title() not in store:
+        print(f"Feedback: We do not have {item_request.title()}s at the moment.")
+    else:
+        item_quantity = int(input(f"How many {item_request}s do you want to buy: "))
+        break
+    
+while store[item_request] >= item_quantity:
+    print(f"{item_request} bought successfully!")
+
+else:
+    print(f"We have {store[item_request]} available.")
+
+# item_quatity = input("Enter qauntity of the item you want to buy: ")
+'''
+
+# try:
+#     y = 10 / 2
+# except ZeroDivisionError: 
+#     print("Cannot be devided by Zero")
+
+
+
+
+# Tast 10: Error Handling 
+
+# Simulated USSD Menu Interaction
+
+print("Yello! Dial *556# for data and other services")
+
+ussd_code = "*556#"
+ussd_request = input("Yello! enter ussd code: ")
+
+while ussd_request != ussd_code:
+    print("You entered the wrong code.")
+    ussd_request = input("Yello! enter ussd code: ")
+
+    
+
+
+
+balance = 500   
+airtime = []
+data_amount = []
+
+
+
+print("Yello Customer! What would you like to do today: ")
+print("1. Check Balance")
+print("2. Buy Airtime")
+print("3. Buy Data")
+
+ussd_request = input("Enter a number: ")
+user_name = input("Kindly sign-up before using our service.\nEnter your name: ")
+phone_num = int(input("Enter your phone number: "))
+password_request = input("Enter password: ")
+
+print(f"\n\nYello Customer! What would you like to do today: ")
+print("1. Check Balance")
+print("2. Buy Airtime")
+print("3. Buy Data")
+
+try:
+    if ussd_request == "1": 
+        print(f"Your balance is {balance}.")
+    elif ussd_request == "2":
+        airtime =input("How much airtime do you want to buy: ")
+        print(f"Your airtime purchase of #{airtime} is succesful")
+    elif ussd_request =="3":
+        data_amount = int(input("How much data do you want: "))
+        if data_amount >= balance :
+            print(f"Insufficient Balace. Your available balance is #{balance}. Buy #{data_amount-balance} airtime to buy #{data_amount} data.")
+        else:
+            print(f"✅Data bought successfully!")
+    else: 
+        print("Enter a valid number.")
+except ValueError:
+    print("Your input must be a number.")
+
+
+
+# Task6-Question 3 - Football Match System
+# **Task3: Simulate a football match ticket system**
+
+# - Store all seat numbers (1 to 50) in a set.
+
+# - Ask users to "book" a seat by entering the number.
+
+# - Remove booked seats from the set.
+
+# - Show remaining seats after each booking.
+
+
+try: 
+    print("Dial *222# to book a football ticket")
+    dial_code = "*222#"
+    dial_code_request =input("Enter ticket dial code: ")
+
+    while dial_code_request != dial_code:
+        dial_code_request = input("Enter ticket dial code: ")
+except ValueError:
+    print("Let your entry be a number. ")   
+
+# ticket_number = set(range(1,50))
+ticket_number = set([i for i in range(1,51)])
+booking_request = int(input("Book a seat number from 1-50: "))
+
+while True: 
+    if booking_request in ticket_number:
+        print(f"Your ticket is booked succesful!")
+        break
+    else: 
+        booking_request = int(input("Book a seat numbe 1-50: ")) 
+    
+unbooked_number_request = int(input("Enter 1 to check available seat numbers: "))
+ticket_number.remove(unbooked_number_request)
+while unbooked_number_request == 1:
+    print("The available seat numbers are: ", ticket_number, sep=",")
+    print("Good Bye!")
+    break
+else: 
+    unbooked_number_request = int(input("Enter 1 to check available number: "))
