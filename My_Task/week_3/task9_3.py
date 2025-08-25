@@ -19,9 +19,8 @@ elif student_bio["age"] >= 25:
 else:
     print("Age: Accepted\nPoint Awarded: 20 Awarded")
 
-while student_bio["nationality"] == "Yes":
+if student_bio["nationality"] == "Yes":
     print("Nationality: Nigerian\nAwarded Point: 20")
-    break
 else: 
     print("Nationality: Not Nigerian\nPoint Awarded: 0")
 while student_bio["waec_status"] == "Yes":
@@ -30,6 +29,11 @@ if student_bio["scholarship_status"] == "Yes":
     print("Scholarshoip Status: Active\nPoint Awarded: 0")
 else:
     print("Scholarship Status: Inactive\nPoint Awarded: 20")
+
 eligibility_status = student_bio["age"] and student_bio["nationality"] and student_bio["waec_status"] and student_bio["scholarship_status"]
 
-print(f"Eligibity Status: {eligibility_status}")
+if eligibility_status == "True":
+    print("Congratulations! You are eligible to apply for the scholarship")
+else:
+    print("Sorry! You are not eligible for the scholarship")
+# print(f"Eligibity Status: {eligibility_status}")

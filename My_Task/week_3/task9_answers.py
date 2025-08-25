@@ -287,8 +287,7 @@ except ValueError:
 
 # - Show remaining seats after each booking.
 
-
-try: 
+try:
     print("Dial *222# to book a football ticket")
     dial_code = "*222#"
     dial_code_request =input("Enter ticket dial code: ")
@@ -296,7 +295,7 @@ try:
     while dial_code_request != dial_code:
         dial_code_request = input("Enter ticket dial code: ")
 except ValueError:
-    print("Let your entry be a number. ")   
+    print("Enter a number.") 
 
 # ticket_number = set(range(1,50))
 ticket_number = set([i for i in range(1,51)])
@@ -317,3 +316,4 @@ while unbooked_number_request == 1:
     break
 else: 
     unbooked_number_request = int(input("Enter 1 to check available number: "))
+
