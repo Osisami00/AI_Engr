@@ -223,7 +223,7 @@ def student_details(**kwargs):
 
 student_details(name="Peter", track = "AI Engineering", interest="Block Chain")
 
-'''
+
 
 # Let's implement on full code
 def participant_profile(name, age, track="AI Engineering", *skills, **extra_info):
@@ -267,7 +267,8 @@ print(participant_profile(
     "Networking", "Ethical Hacking", "Python",
     interest="Blockchain", city="Shagamu", phone="08123456789"
 ))
-
+'''
 
 
 # Namespaces and Scope
+# Namespace and Scope
