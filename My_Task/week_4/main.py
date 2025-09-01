@@ -1,7 +1,7 @@
 # This is the module with CSV file path and user prompt
 from pathlib import Path
 import csv
-import file_ops
+# import file_ops
 import os
 
 def local_path():
@@ -62,7 +62,7 @@ def partcipant_list(n):
     path = local_path()
     for i in range(n):
         participant_dic = participant_info()
-        file_ops.save_participant(path, participant_dic)
+        # file_ops.save_participant(path, participant_dic)
 partcipant_list(2)
 
 
