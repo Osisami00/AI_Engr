@@ -29,8 +29,13 @@ class NigerianStudent:
         self.name = name
         self.state_of_origin = state 
         self.course = course
-        # self.student_id = student.generate
+        self.student_id = self.generate_id()
         print(f"Step 6: {self.name} from {self.state_of_origin}, is ready")
+
+    def generate_id(self):
+        import random 
+        return f"UNISAIL{random.randint(1000,9999)}"
 
 Michael = NigerianStudent("Michael", "Lagos", "Ai_Engr")
 print(Michael.name)
+print(Michael.student_id)
