@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EssayFix - Smart Text Improver</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>EssayFix</h1>
+        <p class="subtitle">AI-powered Essay & Email Improver</p>
+
+        <!-- Input Area -->
+        <textarea id="userInput" placeholder="Paste your text here..."></textarea>
+
+        <!-- Action Buttons -->
+        <div class="button-row">
+            <button onclick="processText('rewrite')">Rewrite</button>
+            <button onclick="processText('summarize')">Summarize</button>
+            <button onclick="processText('grammar')">Fix Grammar</button>
+            <button onclick="processText('expand')">Expand</button>
+        </div>
+
+        <!-- Output Area -->
+        <h2>Result:</h2>
+        <div id="outputBox">Your improved text will appear here...</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    
+
+</body>
+</html>
